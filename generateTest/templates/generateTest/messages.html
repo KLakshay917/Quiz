@@ -1,0 +1,125 @@
+{% extends 'generateTest/base.html' %}
+{% load static %}
+{%block content%}
+<div style="height: 100vh;">
+<div class="logos">
+	<img src="{%static 'generateTest/logo.png' %}"  alt="Image 1" class="left">
+	<img src="{%static 'generateTest/msme.png' %}"  alt="Image 2" class="right">
+  </div>
+<div class="container mt-5 mb-5" style="width:50%;">
+ <div class="box">
+    <h1>{{message}}</h1>
+	{% if message == "Sorry! We are no longer accepting any response"%}
+	<div class="contact mt-5">
+		<h1 style="color: rgb(130, 106, 251); text-decoration: underline;">Reach Us !</h1>
+		<div class="contact_label">Address </div>
+		<span>Civil City Road, Haibowal Kalan, Ludhiana, Punjab,INDIA 141001</span>
+		<div class="contact_label">Email </div>
+		<span><a href="mailto:info@example.com" style="text-decoration: none; color: black;">abc@gmail.com</a></span>
+		<div class="contact_label">Phone Number</div>
+		<span>+91132345678</span>
+
+		
+	</div>
+	{%endif%}
+    
+</div>
+</div>
+</div>
+<div class="sponsors">
+	<img src="{%static 'generateTest/digitalw.png' %}" alt="Sponsor 1">
+	<img src="{%static 'generateTest/mi.png' %}" alt="Sponsor 2">
+	<img src="{%static 'generateTest/iso.png' %}" alt="Sponsor 3">
+  </div>
+
+  <footer class="footer">
+	<div class="fcontainer">
+	  <p>Copyright &copy; 2023 <b>Prerogative</b>. All rights reserved.</p>
+	</div>
+  </footer>
+<style>
+    body
+	{
+  background: rgb(223 215 255);
+	}
+	.contact_label
+	{
+		font-size: 18px;
+		font-weight: 600;
+		margin-top: 1rem;
+	}
+	.footer {
+  background-color: #262626;
+  color: #dfdfdf;
+  text-align: center;
+  padding: 10px 0;
+  height: 45px;
+  bottom: 0;
+  width: 100%;
+}
+    .box
+	{
+		background-color: white;
+		border-radius: 10px;
+		padding: 1rem;
+        text-align: center;
+	}
+		.sponsors {
+  text-align: center; /* center the images */
+}
+.sponsors img {
+  margin-bottom: 2rem;
+  text-align: center;
+  display: inline-block;
+  max-width: auto; /* set your desired max-width */
+  height: 120px; /* maintain aspect ratio */
+  margin-right: 18px; /* add some spacing between images */
+}
+.logos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.left {
+  margin-left: 1rem;
+  max-width: auto;
+  height: 90px;
+  order: 1;
+}
+
+.right {
+  margin: 1rem 1rem -10px 0;
+  max-width: auto;
+  height: 150px;
+  order: 2;
+}
+	@media only screen and (max-width: 750px) {
+		
+		.footer p
+		{ font-size: 12px;}
+			  .container
+		   {
+			  margin-top:70px !important;
+			  width:92% !important;
+		   }
+		  }
+		  .sponsors
+		{margin: 0 0 -10px 15px !important;}
+		.sponsors img 
+		{
+		  height:50px;
+		}
+		.right
+		{
+		  margin-top: 0;
+		  height:70px;
+		}
+		.left
+		{
+		  padding-top: 0.5rem;
+		  height:70px;
+		}
+</style>
+{%endblock%}
